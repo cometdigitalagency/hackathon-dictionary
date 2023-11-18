@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.pushNamed(context, "/login");
             },
-            icon: SvgPicture.asset('assets/icon/notification.svg'),
+            icon: SvgPicture.asset('/core/assets/icon/notification.svg'),
           )
         ],
       ),

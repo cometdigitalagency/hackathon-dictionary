@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lao_dictionary/features/community/presentation/bloc/community_bloc.dart';
 import 'package:lao_dictionary/features/community/presentation/view/community_page.dart';
+import 'package:lao_dictionary/features/home/bottom_navigation_bar.dart';
 import 'package:lao_dictionary/features/home/homepage.dart';
 import 'package:lao_dictionary/injection_container.dart';
 import 'injection_container.dart' as di;
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         providers: [
             BlocProvider(create: (context)=> sl<CommunityBloc>())
         ],
-        child:const HomePage()
+        child:const NaviPage()
         ),
     );
   }
