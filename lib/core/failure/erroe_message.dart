@@ -1,0 +1,1 @@
+const NETWORK_ERROR = "Your internet has no connection";
