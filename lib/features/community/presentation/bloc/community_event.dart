@@ -9,7 +9,8 @@ sealed class CommunityEvent extends Equatable {
 
 
 class PostTopic extends CommunityEvent{
-  
+  TopicParams params;
+  PostTopic({required this.params});
 }
 
 class PostCommentEvent extends CommunityEvent{

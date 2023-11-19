@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:lao_dictionary/features/community/data/model/comment_model_response.dart';
-import 'package:lao_dictionary/features/community/domain/entities/Comment.dart';
+import 'package:lao_dictionary/features/community/domain/entities/comment_entity.dart';
+
 
 class Topics extends Equatable{
   final String id;
@@ -8,11 +8,10 @@ class Topics extends Equatable{
   final DateTime createAt;
   final String title;
   final String details;
-  final List<CommentModelRespons> comments;
 
-  const Topics({required this.id, required this.ownerId, required this.createAt, required this.title, required this.details, required this.comments});
+  const Topics({required this.id, required this.ownerId, required this.createAt, required this.title, required this.details});
   
   @override
   // TODO: implement props
-  List<Object?> get props => [id, ownerId, createAt, title, details, comments];
+  List<Object?> get props => [id, ownerId, createAt, title, details];
 }

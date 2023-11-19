@@ -6,14 +6,14 @@ import 'package:lao_dictionary/features/dictionary/domain/repositories/get_words
 import '../../../../core/usecases/Usecase.dart';
 import '../Entities/word.dart';
 
-class GetWords extends Usecase<Word, Params>{
+class GetWords extends Usecase<List<Word>, Params>{
   IGetWordRepository getWordRepository;
   GetWords({required this.getWordRepository});
   
   @override
-  Future<Either<Failure, Word>> call(Params params) async{
+  Future<Either<Failure, List<Word>>> call(Params params) async{
     // TODO: implement call
-    return getWordRepository.getWord();
+    return await getWordRepository.getWord();
   }
 
 

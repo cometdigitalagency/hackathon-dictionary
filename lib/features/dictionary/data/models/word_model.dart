@@ -1,7 +1,7 @@
-class WordModel{
-    late String id;
-    late String word;
-    late String meaning;
-    List<String> examples;
-    WordModel({required this.id, required this.word, required this.meaning, required this.examples});
+import 'package:lao_dictionary/features/dictionary/domain/Entities/word.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+
+class WordModel extends Word{
+  WordModel({required super.word, required super.meaning});
 }

@@ -1,23 +1,7 @@
-import 'package:equatable/equatable.dart';
-import 'package:json_annotation/json_annotation.dart';
+import 'package:lao_dictionary/features/community/domain/entities/comment_entity.dart';
 
-part 'comment_model.g.dart';
-@JsonSerializable()
-class CommentModel {
-  String topicId;
-  String message;
-  DateTime createAt;
-  String userId;
-  String username;
-  String profileUrl;
 
-CommentModel({required this.topicId,required this.message,required this.createAt, required this.userId,required this.username ,required this.profileUrl});
-  @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
 
-   factory CommentModel.fromJson(Map<String, dynamic> json) => _$CommentModelFromJson(json);
-
-  /// Connect the generated [_$PersonToJson] function to the `toJson` method.
-  Map<String, dynamic> toJson() => _$CommentModelToJson(this);
+class CommentModel extends CommentEntity {
+  CommentModel({required super.message, required super.createAt, required super.userId, required super.username, required super.profileUrl});
 }

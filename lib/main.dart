@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lao_dictionary/features/community/presentation/bloc/community_bloc.dart';
-import 'package:lao_dictionary/features/community/presentation/view/community_page.dart';
-import 'package:lao_dictionary/features/home/bottom_navigation_bar.dart';
-import 'package:lao_dictionary/features/home/homepage.dart';
+import 'package:lao_dictionary/features/dictionary/presentation/bloc/bloc/dictionary_bloc.dart';
 import 'package:lao_dictionary/injection_container.dart';
+import 'configs/router/router.dart';
 import 'injection_container.dart' as di;
-void main() async{
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await di.init();
   runApp(const MyApp());
@@ -15,23 +15,22 @@ void main() async{
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: MultiBlocProvider(
-        providers: [
-            BlocProvider(create: (context)=> sl<CommunityBloc>())
-        ],
-        child:const NaviPage()
+    return MultiBlocProvider(
+    providers: [
+      BlocProvider(create: (contet)=> sl<CommunityBloc>()),
+      BlocProvider(create: (context) => sl<DictionaryBloc>())
+    ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
         ),
+        initialRoute: '/',
+        routes: customRoutes,
+      ),
     );
   }
 }
-
-

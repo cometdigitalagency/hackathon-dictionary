@@ -4,5 +4,5 @@ import 'package:lao_dictionary/core/failure/failures.dart';
 import '../Entities/word.dart';
 
 abstract class IGetWordRepository{
-   Future<Either<Failure, Word>> getWord();
+   Future<Either<Failure, List<Word>>> getWord();
 }

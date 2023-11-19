@@ -11,6 +11,10 @@ sealed class CommunityState extends Equatable {
 class Empty extends CommunityState{
   
 }
+
+class Loading extends CommunityState{
+
+}
 class Posting extends CommunityState{
 
 }
@@ -20,6 +24,11 @@ class PostedTopic extends CommunityState{
 
 class PostedComment extends CommunityState{
 
+}
+
+class GetDailyTopic extends CommunityState{
+    List<Topics> topics;
+    GetDailyTopic({required this.topics});
 }
 
 

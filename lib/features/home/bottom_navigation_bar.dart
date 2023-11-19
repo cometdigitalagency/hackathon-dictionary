@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lao_dictionary/features/community/presentation/view/community_page.dart';
-
-import 'homepage.dart';
+import '../dictionary/presentation/view/homepage.dart';
 
 class NaviPage extends StatefulWidget {
   const NaviPage({Key? key}) : super(key: key);
@@ -33,19 +32,19 @@ class _NaviPageState extends State<NaviPage> {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              '/core/assets/icon/home.svg',
+              'lib/core/assets/icon/home.svg',
             ),
             label: "ໜ້າຫຼັກ",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              '/core/assets/icon/comunity.svg',
+              'lib/core/assets/icon/community.svg',
             ),
             label: "ຊຸມຊົນ",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              '/core/assets/icon/favorite.svg',
+              'lib/core/assets/icon/favorite.svg',
             ),
             label: "ຄໍາທີ່ມັກ",
           ),

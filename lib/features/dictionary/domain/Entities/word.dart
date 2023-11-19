@@ -1,8 +1,12 @@
-class Word {
- String Id;
+import 'package:equatable/equatable.dart';
+
+class Word extends Equatable{
  String word;
  String meaning;
- List<String> examples;
 
- Word({required this.Id, required this.word, required this.meaning, required this.examples});
+ Word({required this.word, required this.meaning});
+ 
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 }
